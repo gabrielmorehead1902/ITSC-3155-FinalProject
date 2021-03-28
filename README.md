@@ -1,2 +1,2 @@
 # ITSC-3155-FinalProject
-Something something test
+Something something final project
