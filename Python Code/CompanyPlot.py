@@ -3,11 +3,19 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import numpy as np
 from pandas import DataFrame
+from plotly.offline import plot
+import chart_studio
+import chart_studio.plotly as py
+import chart_studio.tools as tls
+
+username = 'avander7'
+api_key = 'poRT8nzcpb2Yt1EVj7aN'
+chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
 
 df = pd.read_csv('companyGraph.csv')
 
 top_five = []
-for i in range(10):
+for i in range(15):
     high_co2 = 0
     high_column = None
     
@@ -32,7 +40,6 @@ title='Top 10 Companies releasing Green House Gasses',
 xaxis_title="Years",
 yaxis_title="Metric Tons of Carbon Emissions")
 
-
 plots = []
 for h in top_five:
     for c in df.iloc[:, 1:]:
@@ -42,4 +49,7 @@ for h in top_five:
             plots.append(fig)
 
 fig = go.Figure(data=plots, layout=layout)
+py.plot(fig, filename = 'hey it worked', auto_open=False)
 fig.show()
+
+
