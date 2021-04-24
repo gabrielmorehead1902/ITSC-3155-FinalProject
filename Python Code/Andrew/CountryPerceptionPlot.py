@@ -2,6 +2,13 @@ import plotly.graph_objects as go
 import plotly.express as px
 import chart_studio.plotly as py
 import pandas as pd
+import chart_studio
+import chart_studio.plotly as py
+import chart_studio.tools as tls
+
+username = 'avander7'
+api_key = 'poRT8nzcpb2Yt1EVj7aN'
+chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
 
 data = pd.read_csv("YCOM_2020_Data.csv")
 
@@ -24,4 +31,5 @@ fig = px.pie(values=values, names=names, title="Public belief that Global Warmin
 fig.layout.font.size = 20
 fig.update_traces(text=names)
 fig.update(layout_showlegend=False)
+py.plot(fig, filename = 'public perception', auto_open=True)
 fig.show()
