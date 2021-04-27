@@ -38,7 +38,11 @@
 <style>
 body {
   margin: 0;
+  color: #f2f2f2;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://cdnuploads.aa.com.tr/uploads/Contents/2021/03/11/thumbs_b_c_ceba6107727d4163d0b8ab085664d137.jpg?v=122958');
+  background-repeat: no-repeat;
+  background-size: 100% 100%
 }
 
 .topnav {
@@ -95,19 +99,26 @@ body {
 </head>
 <body>
 
+
+
 <div class="topnav" id="myTopnav">
   <a href="index.html" class="active"><i class="fa fa-home"></i></a>
   <a href="graphs.html">Graphs</a>
   <a href="news.html">News</a>
   <a href="resource.html">Resource</a>
-    <div style="padding-left:1100px">
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -126,22 +137,26 @@ body {
   left: 16px;
 }
 
-
+.h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
+
+.h1{
+  color: rgb(255, 255, 255)
+}
+
+.p{
+  color: rgb(255, 255, 255);
+}
+
+
 </style>
 </head>
 <body>
 
 </div>
 
-<div class="container">
-
-  <img src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/03/11/thumbs_b_c_ceba6107727d4163d0b8ab085664d137.jpg?v=122958" alt="Snow" style="width:100%; " >
-
-    <div class="top-left">
-<div style="padding-right:450px">
-  <h2>GWD</h2>
-</div>
 
 
 
@@ -158,13 +173,12 @@ function myFunction() {
 
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div style="padding-left:500px">
+        <div style="padding-right:325px">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Home</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            
           </div>
 
         </div>
@@ -222,6 +236,7 @@ function myFunction() {
   background-color: #ddd;
 }
 
+
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
@@ -231,14 +246,26 @@ function myFunction() {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(255, 255, 255);
   border-top: none;
 }
+
+.h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.p{
+  color: rgb(255, 255, 255);
+}
+
+
+
 </style>
 </head>
 <body>
 
-<h2>Global Warming Dashboard 101</h2>
+  <h1 class="h2">Global Warming Dashboard 101</h1>
 
 <button class="accordion">WHAT IS GLOBAL WARMING?</button>
 <div class="panel">
@@ -253,6 +280,7 @@ function myFunction() {
 <button class="accordion">FACTS</button>
 <div class="panel">
 <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Public')">Public Perception</button>
   <button class="tablinks" onclick="openCity(event, 'London')">Causes</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Effects</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Evidence</button>
@@ -271,6 +299,12 @@ function myFunction() {
 <div id="Tokyo" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Public" class="tabcontent">
+ 
+  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~avander7/14.embed" height="425" width="100%"></iframe>
+  <p>Today not enough people believe that Global Warming is a priority.</p>
 </div>
 
 <script>
