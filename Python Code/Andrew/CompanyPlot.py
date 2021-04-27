@@ -49,7 +49,7 @@ for h in top_five:
             plots.append(fig)
 
 fig = go.Figure(data=plots, layout=layout)
-py.plot(fig, filename = 'hey it worked', auto_open=False)
+py.plot(fig, filename = 'company plot', auto_open=True)
 fig.show()
 
 

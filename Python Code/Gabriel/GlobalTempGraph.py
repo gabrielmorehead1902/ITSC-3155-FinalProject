@@ -4,6 +4,14 @@ import plotly.graph_objs as go
 import numpy as np
 from pandas import DataFrame
 from plotly.offline import plot
+import chart_studio
+import chart_studio.plotly as py
+import chart_studio.tools as tls
+
+username = 'avander7'
+api_key = 'poRT8nzcpb2Yt1EVj7aN'
+chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
+
 
 df = pd.read_csv('GlobalLandTemperatures_GlobalTemperatures.csv')
 
@@ -28,4 +36,5 @@ yaxis_title = 'Average Temperature')
 fig = go.Figure(data = data, layout = layout)
 fig.update_yaxes(range=[-5,20])
 fig.update_xaxes(range= [-4000000000000,1420000000000])
+py.plot(fig, filename = 'global emissions', auto_open=True)
 fig.show()
