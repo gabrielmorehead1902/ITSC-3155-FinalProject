@@ -3,6 +3,7 @@ import chart_studio.plotly as py
 import pandas as pd
 import chart_studio
 
+
 username = 'avander7'
 api_key = 'poRT8nzcpb2Yt1EVj7aN'
 chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
