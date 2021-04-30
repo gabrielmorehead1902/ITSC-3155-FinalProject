@@ -1,0 +1,639 @@
+<!doctype html>
+<body lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Dashboard Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://cdnuploads.aa.com.tr/uploads/Contents/2021/03/11/thumbs_b_c_ceba6107727d4163d0b8ab085664d137.jpg?v=122958');
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ff7b00;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active"><i class="fa fa-home"></i></a>
+  <a href="graphs.html">Graphs</a>
+  <a href="news.html">News</a>
+  <a href="resource.html">Resource</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.h1{
+  color: rgb(255, 255, 255)
+}
+
+.p{
+  color: rgb(255, 255, 255);
+}
+
+
+</style>
+</head>
+<body>
+
+</div>
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div style="padding-right:325px">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Home</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+
+          </div>
+
+        </div>
+      </div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  color: #f2f2f2;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ff8000;
+  color: #444;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  overflow: hidden;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #666666;
+  background-color: #666666;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid rgb(255, 255, 255);
+  border-top: none;
+}
+
+.h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.p{
+  color: rgb(255, 255, 255);
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <h1 class="h2">Global Warming 101 - Definition, Facts, Causes and Effects</h1>
+
+<button class="accordion">WHAT IS GLOBAL WARMING?</button>
+<div class="panel">
+  <p>Global warming is the long-term heating of Earth’s climate system observed since the pre-industrial period (between 1850 and 1900) due to human activities, primarily fossil fuel burning, which increases heat-trapping greenhouse gas levels in Earth’s atmosphere. The term is frequently used interchangeably with the term climate change, though the latter refers to both human- and naturally produced warming and the effects it has on our planet. It is most commonly measured as the average increase in Earth’s global surface temperature.</p>
+</div>
+
+<button class="accordion">WHAT IS CLIMATE CHANGE?</button>
+<div class="panel">
+  <p>Climate change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. These changes have a broad range of observed effects that are synonymous with the term.</p>
+</div>
+
+<button class="accordion">FACTS</button>
+<div class="panel">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Public')">Public Perception</button>
+  <button class="tablinks" onclick="openCity(event, 'Causes')">Causes</button>
+  <button class="tablinks" onclick="openCity(event, 'Effects')">Effects</button>
+  <button class="tablinks" onclick="openCity(event, 'Evidence')">Evidence</button>
+  <button class="tablinks" onclick="openCity(event, 'Frankfurt')">Temperature</button>
+</div>
+
+<div id="Causes" class="tabcontent">
+  <h3>Water vapor</h3>
+  <p>The most abundant greenhouse gas, but importantly, it acts as a feedback to the climate. Water vapor increases as the Earth's atmosphere warms, but so does the possibility of clouds and precipitation, making these some of the most important feedback mechanisms to the greenhouse effect.</p>
+  <p> </p>
+  <h3>Carbon dioxide (CO2)</h3>
+  <p>A minor but very important component of the atmosphere, carbon dioxide is released through natural processes such as respiration and volcano eruptions and through human activities such as deforestation, land use changes, and burning fossil fuels. Humans have increased atmospheric CO2 concentration by 47% since the Industrial Revolution began. This is the most important long-lived "forcing" of climate change.</p>
+  <p> </p>
+  <h3>Methane</h3>
+  <p>A hydrocarbon gas produced both through natural sources and human activities, including the decomposition of wastes in landfills, agriculture, and especially rice cultivation, as well as ruminant digestion and manure management associated with domestic livestock. On a molecule-for-molecule basis, methane is a far more active greenhouse gas than carbon dioxide, but also one which is much less abundant in the atmosphere.</p>
+  <p> </p>
+  <h3>Nitrous oxide</h3>
+  <p>A powerful greenhouse gas produced by soil cultivation practices, especially the use of commercial and organic fertilizers, fossil fuel combustion, nitric acid production, and biomass burning.</p>
+  <p> </p>
+  <h3>Chlorofluorocarbons (CFCs)</h3>
+  <p>Synthetic compounds entirely of industrial origin used in a number of applications, but now largely regulated in production and release to the atmosphere by international agreement for their ability to contribute to destruction of the ozone layer. They are also greenhouse gases.</p>
+
+</div>
+
+<div id="Effects" class="tabcontent">
+  <h3>The On-going Effects</h3>
+  <p>Global climate change has already had observable effects on the environment. Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, plant and animal ranges have shifted and trees are flowering sooner.
+  <p>Scientists have high confidence that global temperatures will continue to rise for decades to come, largely due to greenhouse gases produced by human activities. The Intergovernmental Panel on Climate Change (IPCC), which includes more than 1,300 scientists from the United States and other countries, forecasts a temperature rise of 2.5 to 10 degrees Fahrenheit over the next century. </p>
+  <h3>Future Effects</h3>
+  <p>Global climate is projected to continue to change over this century and beyond. Because human-induced warming is superimposed on a naturally varying climate, the temperature rise has not been, and will not be, uniform or smooth across the country or over time.</p>
+  <p>In a future in which heat-trapping gas emissions continue to grow, increases of a month or more in the lengths of the frost-free and growing seasons are projected across most of the U.S. by the end of the century, with slightly smaller increases in the northern Great Plains. The largest increases in the frost-free season (more than eight weeks) are projected for the western U.S., particularly in high elevation and coastal areas. The increases will be considerably smaller if heat-trapping gas emissions are reduced.</p>
+Effects that scientists had predicted in the past would result from global climate change are now occurring: loss of sea ice, accelerated sea level rise and longer, more intense heat waves.</p>
+  <p>Projections of future climate over the U.S. suggest that the recent trend towards increased heavy precipitation events will continue. This trend is projected to occur even in regions where total precipitation is expected to decrease, such as the Southwest. </p>
+  <p>Summer temperatures are also projected to continue rising, and a reduction of soil moisture, which exacerbates heat waves, is projected for much of the western and central U.S. in summer. By the end of this century, what have been once-in-20-year extreme heat days (one-day events) are projected to occur every two or three years over most of the nation. </p>
+</div>
+
+<div id="Evidence" class="tabcontent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Title text  */
+.titletext {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  top: 24px;
+  position: absolute;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #cc6600;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* SLIDESHOW  */
+
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <div class="titletext">Global Temperature Rise</div>
+  <img src="https://cdn.climatechangenews.com/files/2015/01/germany-heatwave-600x337.jpg" style="width:100%">
+  <div class="text">Image: Pollute from industries and transportation has been contributing to the increase of temperature around the world.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <div class="titletext">Shrinking Ice Sheets</div>
+  <img src="https://cdn.impakter.com/wp-content/uploads/2019/07/photo-1461880234904-751a2f54f1c7.jpg" style="width:100%">
+  <div class="text">Image: Melting ice from the Greenland ice sheet.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <div class="titletext">Glacial Retreat</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Snow_and_Ice_on_Kilimanjaro-2000.jpg" style="width:100%">
+  <div class="text">Image: The disappearing snowcap of Mount Kilimanjaro, from space.</div>
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <div class="titletext">Decreased Snow Cover</div>
+  <img src="https://www.aspenpublicradio.org/sites/kajx/files/201305/measuring%20snowpack.jpg" style="width:100%">
+  <div class="text">Image: Satellite observations prove a decreasing in snow cover of the Northern Hemisphere .</div>
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <div class="titletext">Sea Level Rise</div>
+  <img src="https://media.nationalgeographic.org/assets/photos/513/464/26a0f73f-238e-427a-aa56-173edc69cc45.jpg" style="width:100%">
+  <div class="text">Image: Island communities like those in the Philippines at risk of flooding and water damage from sea level rising.</div>
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <div class="titletext">Extreme Events - Flood</div>
+  <img src="https://earthjustice.org/sites/default/files/feature/2020/weather/harvey_joe-raedle-getty-1200.jpg" style="width:100%">
+  <div class="text">Image: Houston residents escape flooded homes and businesses, in the aftermath of Hurricane Harvey in 2017.</div>
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <div class="titletext">Extreme Events - Wildfire</div>
+  <img src="https://earthjustice.org/sites/default/files/feature/2020/weather/wildfire-hill_noah-berger-ap-1200.jpg" style="width:100%">
+  <div class="text">Image: Flames consume a hillside as firefighters battle the Maria Fire in Santa Paula, Calif., on Nov. 1, 2019.</div>
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">8 / 8</div>
+  <div class="titletext">Extreme Events - Drought</div>
+  <img src="https://earthjustice.org/sites/default/files/feature/2020/weather/drought_spencer-platt-getty-1200.jpg" style="width:100%">
+  <div class="text">Image: A dried out lake stands near the Navajo Nation town of Thoreau on Jun. 6, 2019, in Thoreau, N.M.</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+
+<div id="Public" class="tabcontent">
+
+  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~avander7/14.embed" height="425" width="100%"></iframe>
+  <p>Today not enough people believe that Global Warming is a priority.</p>
+</div>
+
+<div id="Frankfurt" class="tabcontent">
+
+  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://chart-studio.plotly.com/~avander7/20.embed" height="425" width="100%"></iframe>
+  <p>This is how the average temperature has changed since 1850.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+   </body>
+
+
+<!-- BOTTOM BAR -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #333333;
+  overflow: auto;
+  bottom: 0;
+  position: absolute;
+}
+
+.navbar a {
+  float: left;
+  padding: 24px;
+  border: 1px solid rgb(102, 102, 102);
+  border-top: none;
+  border-bottom: none;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #FF8000;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+<body>
+
+<div class="navbar">
+  <a href="#">TEMPERATURE RISE</a>
+  <a href="#">CARBON DIOXIDE</a>
+  <a href="#">ICE SHEET</a>
+  <a href="#">SEA LEVEL</a>
+</div>
+
+</body>
+</html>
