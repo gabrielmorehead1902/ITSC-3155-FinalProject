@@ -21,11 +21,16 @@ values = [prop_sum, pr_sum, not_sure]
 
 # Figure out how to color
 
+fig_title = "Public belief that Global Warming is a priority"
+fig = px.pie(
+    values=values,
+    names=names,
+    title= fig_title,
+    hole=.6,
+    color = names,
+    color_discrete_map={'No':'#F2545B', 'Yes':'#61D095', 'Maybe':'#FFC170'})
 
-fig = px.pie(values=values, names=names, title="Public belief that Global Warming is a priority", hole=.6, color = names, color_discrete_map={
-                                                                                                                        'No':'#F2545B',
-                                                                                                                        'Yes':'#61D095',
-                                                                                                                        'Maybe':'#FFC170'})
+
 fig.layout.font.size = 20
 fig.update_traces(text=names)
 fig.update(layout_showlegend=False)
