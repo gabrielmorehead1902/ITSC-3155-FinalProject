@@ -10,7 +10,7 @@ chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
 df = pd.read_csv('companyGraph.csv')
 
 top_five = []
-for i in range(15):
+for i in range(10):
     high_co2 = 0
     high_column = None
 
