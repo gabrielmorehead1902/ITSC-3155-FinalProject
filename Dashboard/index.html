@@ -271,16 +271,16 @@ function myFunction() {
 <button class="accordion">INTRODUCTION</button>
 <div class="panel">
   <p>The Global Warming Dashboard is intended to be a compilation of the most pertinent information currently available regarding global warming
-    and climate change. This is intended to not only give viewers a all-in-one look at how climate change has affected the Earth and continues to
+    and climate change. This is intended to not only give viewers an all-in-one look at how climate change has affected the Earth and continues to
     affect it through the graphs and facts, but it is also a means to change the current narrative regarding the responsibility of fixing climate
     change. We believe that for too long have the common people been told that they need to change, they need to reduce their carbon footprint, and
     while this is a good practice, it deflects from the true culprits of climate change: multimillion dollar corporations. We wish to expose these
     truths in their full context to the public, and give them the opportunity to strike back against these companies by not supporting their
     practices. Through our evolving leaderboard graph, we show the top 10 most carbon emitting companies and below it the top 10 most carbon
-    emitting countires, and give those viewing these a full understanding of just how much pollution these companies and countries produce in
-    comparison to the everyday person. We truly believe the people have the power to enact change, and by providing these insights in a quick
+    emitting countries, and give those viewing these a full understanding of just how much pollution these companies and countries produce in
+    comparison to the everyday person. We truly believe that the average person has the power to enact change, and by providing these insights in a quick
     and easy to understnad format, we hope to create a movement of real change by telling these entities that we will not support them if they
-    continue along this path.</p>
+    continue their practices.</p>
 </div>
 
 <button class="accordion">WHAT IS GLOBAL WARMING?</button>
@@ -423,8 +423,10 @@ img {vertical-align: middle;}
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards; 
   animation-name: fade;
   animation-duration: 1.5s;
+  animation-fill-mode: forwards; 
 }
 
 @-webkit-keyframes fade {
@@ -515,6 +517,11 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
 </div>
 
 <script>
@@ -536,7 +543,7 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
