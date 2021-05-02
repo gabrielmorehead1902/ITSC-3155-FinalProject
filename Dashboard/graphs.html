@@ -36,10 +36,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+   background-image: url('https://raw.githubusercontent.com/gabrielmorehead1902/ITSC-3155-FinalProject/main/Dashboard/Images/climate-change.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100% 100%
 }
 
 .topnav {
@@ -101,7 +104,7 @@ body {
   <a href="graphs.html" class="active">Graphs</a>
   <a href="news.html">News</a>
   <a href="resource.html">Resource</a>
-    
+
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -111,7 +114,7 @@ body {
 .container {
   position: relative;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: #f2f2f2;
 }
 
 .bottom-left {
@@ -128,12 +131,9 @@ body {
 </div>
 
 <div class="container">
-
-  
-
     <div class="top-left">
 <div style="padding-left:16px">
- 
+
 </div>
 
 
@@ -156,26 +156,26 @@ function myFunction() {
         <h1 class="h2">Global Warming Visualized</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            
-          
+
+
           </div>
 
         </div>
       </div>
-
-      <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://chart-studio.plotly.com/~avander7/3.embed" height="625" width="100%"></iframe>
+    <!--Graph is displayed here-->
+      <iframe id="igraph" scrolling="no" style="border:none; max-width: 1500px;" seamless="seamless" src="https://chart-studio.plotly.com/~avander7/3.embed" height="625" width="100%"></iframe>
       <p>Over the years, greenhouse gasses have increased due to the activity of dozens of companies with China (Coal) being  the worst offender. National Iranian Oil Co and Saudi Ariabian Oil Company are the next top offenders, both increasing their emissions. </p>
-      <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~avander7/8/" height="725" width="100%"></iframe>
-      <p>Today China, the United States, and India by far are the world's worst offenders in releasing CO2 emissions. This data was recorded in 2018.</p>
-      <!--Graph is displayed here-->
-      
+      <iframe id="igraph" scrolling="no" style="border:none; max-width: 1500px;" seamless="seamless" src="https://plotly.com/~avander7/8/" height="725" width="100%"></iframe>
+      <p>Today China, the United States, and India by far are the world's worst offenders in releasing CO2 emissions.</p>
+
+
 
       </div>
     </main>
   </div>
 </div>
 
-    
+
     <script src="../toggle.js"></script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
